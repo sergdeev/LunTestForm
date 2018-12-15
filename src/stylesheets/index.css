@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+#root{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.form_container {
+  width: 400px;
+  height: 400px;
+}
+
+.img_container{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.img {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+}
