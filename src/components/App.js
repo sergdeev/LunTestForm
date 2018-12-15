@@ -11,7 +11,7 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {
-      currentStep: 3,
+      currentStep: 0,
       values: {
         name: "",
         email: "",
@@ -74,12 +74,18 @@ class App extends React.Component {
   onChangeAvatar = event => {
     const newValues = {
       ...this.state.values,
-      avatar: event.target.value
+      avatar: event.target.name
+    };
+
+    const newErrors = {
+      ...this.state.errors,
+      avatar: false
     };
 
     this.setState(prevState => ({
       ...prevState,
-      values: newValues
+      values: newValues,
+      errors: newErrors
     }))
   }
 

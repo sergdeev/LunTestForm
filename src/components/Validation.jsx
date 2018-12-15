@@ -1,3 +1,5 @@
+import dog4 from "../images/dog4.jpg";
+
 export const validate = (values, step) => {
     const errors = {};
     switch (step) {
@@ -17,6 +19,15 @@ export const validate = (values, step) => {
         case 1: {
             if(!values.country){
                 errors.country = "Required";
+            }
+            
+            break;
+        }
+        case 3: {
+            if(!values.avatar){
+                errors.avatar = "Required";
+            }else if(values.avatar === dog4){
+                errors.avatar = "Вы выбрали собачку. А надо котика.";
             }
             
             break;

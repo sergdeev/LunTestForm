@@ -10,10 +10,10 @@ export default class FourthStep extends React.Component{
         return(
             <div>
                 <div className="img_container">
-                    <img className="img" src={cat1} value="{cat1}" onClick={onChangeAvatar}/>
-                    <img className="img" src={cat2} value={"cat2"} onClick={onChangeAvatar}/>
-                    <img className="img" src={cat3} value={"cat3"} onClick={onChangeAvatar}/>
-                    <img className="img" src={dog4} value={"dog4"} onClick={onChangeAvatar}/>
+                    <img className="img" src={cat1} name={cat1} onClick={onChangeAvatar}/>
+                    <img className="img" src={cat2} name={cat2} onClick={onChangeAvatar}/>
+                    <img className="img" src={cat3} name={cat3} onClick={onChangeAvatar}/>
+                    <img className="img" src={dog4} name={dog4} onClick={onChangeAvatar}/>
                 </div>
                 {errors.avatar ? <div>{errors.avatar}</div> : null}
             </div>  
