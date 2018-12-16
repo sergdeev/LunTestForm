@@ -5,7 +5,7 @@ export default class BottomNavigation extends React.Component{
     render(){
         const { prevStep, nextStep, currentStep } = this.props;
         return(
-            <div>
+            <div className="bottomButtons_container">
                 {(currentStep !== 4)? (
                     <div>
                         <button
@@ -28,7 +28,7 @@ export default class BottomNavigation extends React.Component{
                     <div>
                         <button
                             type="button"
-                            className="btn"
+                            className="special_btn"
                             onClick={()=>{
                                 window.location.reload();
                             }}

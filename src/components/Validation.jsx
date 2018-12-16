@@ -21,6 +21,10 @@ export const validate = (values, step) => {
                 errors.country = "Required";
             }
             
+            if(!values.city){
+                errors.city = "Required";
+            }
+
             break;
         }
         case 2: {

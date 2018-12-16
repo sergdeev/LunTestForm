@@ -26,7 +26,7 @@ export default class ThirdStep extends React.Component{
                                     name="fbValue"
                                     /></td>: <div></div>}
 						</tr>
-                        <tr>{errors.fbValue ? <div>{errors.fbValue}</div> : null}</tr>
+                        <tr>{errors.fbValue ? <div className="error">{errors.fbValue}</div> : null}</tr>
 
 						<tr>
                             <td><input 
@@ -46,7 +46,7 @@ export default class ThirdStep extends React.Component{
                                     name="vkValue"
                                     /></td>: <div></div>}
 						</tr>
-                        <tr>{errors.vkValue ? <div>{errors.vkValue}</div> : null}</tr>
+                        <tr>{errors.vkValue ? <div className="error">{errors.vkValue}</div> : null}</tr>
 
 						<tr>
                             <td><input 
@@ -66,7 +66,7 @@ export default class ThirdStep extends React.Component{
                                     name="twitValue"
                                     /></td>: <div></div>}
 						</tr>
-                        <tr>{errors.twitValue ? <div>{errors.twitValue}</div> : null}</tr>
+                        <tr>{errors.twitValue ? <div className="error">{errors.twitValue}</div> : null}</tr>
 
 						<tr>
                             <td><input 
@@ -86,7 +86,7 @@ export default class ThirdStep extends React.Component{
                                     name="okValue"
                                     /></td>: <div></div>}
 						</tr>
-                        <tr>{errors.okValue ? <div>{errors.okValue}</div> : null}</tr>
+                        <tr>{errors.okValue ? <div className="error">{errors.okValue}</div> : null}</tr>
 					</table>
             </div>
         );

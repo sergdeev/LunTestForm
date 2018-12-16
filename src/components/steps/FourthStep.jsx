@@ -16,7 +16,7 @@ export default class FourthStep extends React.Component{
                     <img className="img" src={cat3} name={cat3} onClick={onChangeAvatar}/>
                     <img className="img" src={dog4} name={dog4} onClick={onChangeAvatar}/>
                 </div>
-                {errors.avatar ? <div>{errors.avatar}</div> : null}
+                {errors.avatar ? <div className="error">{errors.avatar}</div> : null}
             </div>  
         );
     }

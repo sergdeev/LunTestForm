@@ -1,26 +1,32 @@
 import React from "react";
 import countries from "../../data/countries.json";
-import cities from "../../data/cities";
+
 
 export default class SecondStep extends React.Component{
 
-    getOptionsItems = items => {
+    getOptionsCountry = items => {
+        //const countries = JSON.stringify(items);
         const countries = [];
-        for (var key in JSON.stringify(items)) {
+        for (var key in items) {
             countries.push({
                 id: key,
                 name: items[key]
             })
           }
-        return countries.map(item => (
-            <option key={item.id} value={item.id}>
-              {item.name}
-            </option>
-        ));
+          return this.getOptionsItems(countries);
     };
 
+    getOptionsItems = items => {
+        return items.map(item => (
+            <option key={item.id} value={item.id}>
+                {item.name}
+            </option>
+        ));
+    }
+
+
     render(){
-        const {values, onChange, errors} = this.props;
+        const {values, onChange, errors, allCities} = this.props;
         return(
            <div>
                 <p>2. Выберете страну и город</p>
@@ -30,9 +36,24 @@ export default class SecondStep extends React.Component{
                     value={values.country}
                     onChange={onChange}
                     >
-                    {this.getOptionsItems(countries)}
+                    <option>
+                        Выберите страну
+                    </option>
+                    {this.getOptionsCountry(countries)}
                 </select>
-                {errors.country ? <div>{errors.country}</div> : null}
+                {errors.country ? <div className="error">{errors.country}</div> : null}
+                <select
+                    id="city"
+                    name="city"
+                    value={values.city}
+                    onChange={onChange}
+                    >
+                    <option>
+                        Выберите город
+                    </option>
+                    {this.getOptionsItems(allCities)}
+                </select>
+                {errors.country ? <div className="error">{errors.country}</div> : null}
             </div>
         );
     }

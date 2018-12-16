@@ -14,7 +14,7 @@ export default class FirstStep extends React.Component{
                     value={values.name}
                     onChange={onChange}
                 />
-                    {errors.name ? <div>{errors.name}</div> : null}
+                    {errors.name ? <div className="error">{errors.name}</div> : null}
                 <input
                     type="email"
                     placeholder="Почта"
@@ -22,7 +22,7 @@ export default class FirstStep extends React.Component{
                     value={values.email}
                     onChange={onChange}
                 />
-                    {errors.email ? <div>{errors.email}</div> : null}
+                    {errors.email ? <div className="error">{errors.email}</div> : null}
             </div>
         );
     }
