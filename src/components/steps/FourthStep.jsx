@@ -9,6 +9,7 @@ export default class FourthStep extends React.Component{
         const { onChangeAvatar, errors} = this.props;
         return(
             <div>
+                <p>4. Выберите любимого котика</p>
                 <div className="img_container">
                     <img className="img" src={cat1} name={cat1} onClick={onChangeAvatar}/>
                     <img className="img" src={cat2} name={cat2} onClick={onChangeAvatar}/>

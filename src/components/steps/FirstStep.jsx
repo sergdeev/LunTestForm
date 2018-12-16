@@ -6,7 +6,7 @@ export default class FirstStep extends React.Component{
         const {values, onChange, errors} = this.props;
         return(
             <div>
-                <div>1. Введите имя и e-mail</div>
+                <p>1. Введите имя и e-mail</p>
                 <input
                     type="text"
                     placeholder="Имя"

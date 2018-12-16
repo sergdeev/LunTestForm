@@ -13,8 +13,7 @@ body {
 
 
 .form_container {
-  width: 400px;
-  height: 400px;
+  height: 1000px;
 }
 
 .img_container{
@@ -24,7 +23,13 @@ body {
 
 
 .img {
-  width: 70px;
-  height: 70px;
+  width: 150px;
+  height: 150px;
   display: inline-block;
+  margin-right: 16px;
 }
+
+.final_container {
+  display: flex;
+  justify-content: space-between;
+} 

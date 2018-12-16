@@ -23,7 +23,7 @@ export default class SecondStep extends React.Component{
         const {values, onChange, errors} = this.props;
         return(
            <div>
-                <div>2. Выберете страну и город</div>
+                <p>2. Выберете страну и город</p>
                 <select
                     id="country"
                     name="country"

@@ -14,14 +14,14 @@ export default class BottomNavigation extends React.Component{
                             onClick={prevStep}
                             disabled = {currentStep === 0}
                             >
-                            Prev
+                            Предыдущий
                         </button>
                         <button
                             type="button"
                             className="btn"
                             onClick={nextStep}
                             >
-                            {(currentStep === 3)? "Complete": "Next"}
+                            {(currentStep === 3)? "Завершить": "Следующий"}
                         </button>
                     </div>
                 ) : (
@@ -33,7 +33,7 @@ export default class BottomNavigation extends React.Component{
                                 window.location.reload();
                             }}
                             >
-                            Reset
+                            Пройти заново
                         </button>
                     </div>
                 )

@@ -16,13 +16,26 @@ class App extends React.Component {
         name: "",
         email: "",
         country: "",
-        avatar: ""
+        city: "",
+        avatar: "",
+        fbIsChecked: false,
+        twitIsChecked: false,
+        vkIsChecked: false,
+        okIsChecked: false,
+        fbValue: "",
+        vkValue: "",
+        twitValue: "",
+        okValue: "",
       }, 
       errors: {
         name: "",
         email: "",
         country: "",
-        avatar: ""
+        avatar: "",
+        fbIsChecked: "",
+        tweetIsChecked: "",
+        vkIsChecked: "",
+        okIsChecked: ""
       }
     }
   };
@@ -54,20 +67,22 @@ class App extends React.Component {
 
 
   onChange = event => {
+    const name = event.target.name;
+    const value = event.target.value;
     const newValues = {
-        ...this.state.values,
-        [event.target.name]: event.target.value
+      ...this.state.values,
+      [name]: value
     };
 
     const newErrors = {
       ...this.state.errors,
-      [event.target.name]: false
+      [name]: false
     };
 
     this.setState(prevState => ({
-        ...prevState,
-        values: newValues,
-        errors: newErrors
+      ...prevState,
+      values: newValues,
+      errors: newErrors
     }));
   };
 
@@ -89,14 +104,35 @@ class App extends React.Component {
     }))
   }
 
+  onChangeSocial = event => {
+    const name = event.target.name;
+    const value = !this.state.values[name];
+    const errorName = event.target.id;
+    const newValues = {
+      ...this.state.values,
+      [name]: value
+    };
+
+    const newErrors = {
+      ...this.state.errors,
+      [errorName]: false
+    };
+
+    this.setState(prevState => ({
+      ...prevState,
+      values: newValues,
+      errors: newErrors
+    }));
+  }
+
   render() {
-    const {currentStep, values, errors} = this.state;
+    const {currentStep, values, errors } = this.state;
     return (
       <div className="form_container">
               <form className="form card-body">
                 {(currentStep === 0) && <FirstStep onChange={this.onChange} values={values} errors={errors}/>}
                 {(currentStep === 1) && <SecondStep onChange={this.onChange} values={values} errors={errors}/>}
-                {(currentStep === 2) && <ThirdStep onChange={this.onChange} values={values} errors={errors}/>}
+                {(currentStep === 2) && <ThirdStep onChangeSocial={this.onChangeSocial} onChange={this.onChange} values={values} errors={errors}/>}
                 {(currentStep === 3) && <FourthStep onChangeAvatar={this.onChangeAvatar} errors={errors}/>}
                 {(currentStep === 4) && <Final values={values}/>}
                 <BottomNavigation nextStep={this.nextStep} prevStep={this.prevStep} currentStep={currentStep}/>
