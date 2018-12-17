@@ -209,7 +209,7 @@ class App extends React.Component {
         {(currentStep === 1) && <SecondStep onChange={this.onChange} values={values} errors={errors} allCities={allCities}/>}
         {(currentStep === 2) && <ThirdStep onChangeSocial={this.onChangeSocial} onChange={this.onChange} values={values} errors={errors}/>}
         {(currentStep === 3) && <FourthStep onChangeAvatar={this.onChangeAvatar} errors={errors}/>}
-        {(currentStep === 4) && <Final values={values}/>}
+        {(currentStep === 4) && <Final values={values} allCities={allCities}/>}
         <BottomNavigation nextStep={this.nextStep} prevStep={this.prevStep} currentStep={currentStep}/>
       </div>
     );

@@ -16,19 +16,28 @@ export default class BottomNavigation extends React.Component{
                             >
                             Предыдущий
                         </button>
+                        {(currentStep === 3)?
+                        <button
+                            type="button"
+                            className="btn btn_special"
+                            onClick={nextStep}
+                        >
+                            Завершить
+                        </button> : 
                         <button
                             type="button"
                             className="btn"
                             onClick={nextStep}
-                            >
-                            {(currentStep === 3)? "Завершить": "Следующий"}
+                        >
+                            Следующий
                         </button>
+                        }
                     </div>
                 ) : (
                     <div>
                         <button
                             type="button"
-                            className="special_btn"
+                            className="reset_btn btn_special"
                             onClick={()=>{
                                 window.location.reload();
                             }}

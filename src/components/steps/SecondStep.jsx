@@ -24,17 +24,19 @@ export default class SecondStep extends React.Component{
         ));
     }
 
+    addErrorClass = (error) => (error? 'invalid' : 'valid');
 
     render(){
         const {values, onChange, errors, allCities} = this.props;
         return(
-           <div>
+           <div className="country_container">
                 <p>2. Выберете страну и город</p>
                 <select
                     id="country"
                     name="country"
                     value={values.country}
                     onChange={onChange}
+                    className={`${this.addErrorClass(errors.country)}`}
                     >
                     <option>
                         Выберите страну
@@ -47,6 +49,7 @@ export default class SecondStep extends React.Component{
                     name="city"
                     value={values.city}
                     onChange={onChange}
+                    className={`${this.addErrorClass(errors.city)}`}
                     >
                     <option>
                         Выберите город

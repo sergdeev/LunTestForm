@@ -17,29 +17,39 @@ body {
 
 
 .form_container {
-  width: 300px;
+  width: 350px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column
 }
 
+span {
+  word-wrap: normal;
+}
 
-input, select {
+input[type=text], select {
 	color: #bbbbbb;
 	border-radius: 2px;
-	border: 1px solid #ccc;
-	margin-top: 16px;
+	margin: 16px 1px 0 0;
 	padding: 12px;
 	width: 250px;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+.valid {
+  border: 1px solid #ccc;
+  color: #bbbbbb;
+}
+
+.invalid {
+  border: 1px solid #ff0000;
+}
 
 button {
 	background-color: white;
 	border: none;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 button:focus, input:focus {
@@ -47,11 +57,12 @@ button:focus, input:focus {
 	border: 1px solid #B8B8B8;
 }
 
-buttons_container{
+.buttons_container{
   margin-bottom: 16px;
 	font-weight: bold;
 	margin-top: 50px;
-	color: #bbbbbb;
+  color: #bbbbbb;
+  align-self: flex-start;
 }
 
 .top_button {
@@ -70,35 +81,84 @@ buttons_container{
   color: #ff9800;
 }
 
-.bottomButtons_container button {
+
+.btn {
   margin-top: 150px;
 	color: #ff9800;
 	width: 142px;
 	padding: 6px;
 }
 
-
+.btn_special{
+  background-color:  #ff9800;
+  color: #fff;
+}
 
 .bottomButtons_container button:first-child {
 	margin-right: 12px;
 }
 
+.social_container{
+  align-self: flex-start;
+}
 
+.country_container{
+  align-self: flex-start;
+}
+
+td {
+  padding-bottom: 10px;
+}
+
+td input[type=checkbox]{
+  margin: 0;
+}
+
+td input[type=text]{
+  width: 200px;
+  padding: 6px 12px 6px 12px;
+}
 
 .img_container{
   display: flex;
   justify-content: space-between;
 }
 
-
-.img {
+.img_container img {
   width: 150px;
   height: 150px;
   display: inline-block;
   margin-right: 16px;
 }
 
+
 .final_container {
+  padding: 24px;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
+  word-wrap: normal;
 } 
+
+.final_data{
+  min-width: 200px;
+  margin-right: 24px;
+  font-family: "Open Sans";
+}
+
+.final_title{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.final_image img{
+  width: 200px;
+  height: 195px;
+  background-size: cover;
+}
+
+.reset_btn{
+  margin-top: 32px;
+  padding: 10px;
+}

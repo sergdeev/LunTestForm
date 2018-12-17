@@ -2,6 +2,7 @@ import React from "react";
 
 
 export default class FirstStep extends React.Component{
+    addErrorClass = (error) => (error? 'invalid' : 'valid');
     render(){
         const {values, onChange, errors} = this.props;
         return(
@@ -13,16 +14,18 @@ export default class FirstStep extends React.Component{
                     name="name"
                     value={values.name}
                     onChange={onChange}
+                    className={`${this.addErrorClass(errors.name)}`}
                 />
-                    {errors.name ? <div className="error">{errors.name}</div> : null}
+                    {errors.name ? <span className="error">{errors.name}</span> : null}
                 <input
-                    type="email"
+                    type="text"
                     placeholder="Почта"
                     name="email"
                     value={values.email}
                     onChange={onChange}
+                    className={`${this.addErrorClass(errors.email)}`}
                 />
-                    {errors.email ? <div className="error">{errors.email}</div> : null}
+                    {errors.email ? <span className="error">{errors.email}</span> : null}
             </div>
         );
     }

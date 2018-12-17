@@ -17,17 +17,21 @@ export default class TopNavigation extends React.Component {
         const { steps, changeStep, currentStep } = this.props;
         return (
             <div className="buttons_container">
-                    {steps.map(step => (
-                        <button
-                            key={step.id}
-                            name={step.id}
-                            type="button"
-                            className={this.getClassName(step)}
-                            onClick={changeStep}
-                            >
-                            {step.id + 1}
-                        </button>
-                    ))}
+                {(currentStep !== 4) &&  
+                <div>
+                        {steps.map(step => (
+                            <button
+                                key={step.id}
+                                name={step.id}
+                                type="button"
+                                className={this.getClassName(step)}
+                                onClick={changeStep}
+                                >
+                                {step.id + 1}
+                            </button>
+                        ))}
+                </div>
+                }
             </div>
         );
     }
