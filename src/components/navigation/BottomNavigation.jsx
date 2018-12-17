@@ -1,9 +1,7 @@
 import React from "react";
 
-
-export default class BottomNavigation extends React.Component{
-    render(){
-        const { prevStep, nextStep, currentStep } = this.props;
+export default function BottomNavigation(props){
+    const { prevStep, nextStep, currentStep } = props;
         return(
             <div className="bottomButtons_container">
                 {(currentStep !== 4)? (
@@ -14,7 +12,7 @@ export default class BottomNavigation extends React.Component{
                             onClick={prevStep}
                             disabled = {currentStep === 0}
                             >
-                            Предыдущий
+                            &lsaquo; Предыдущий 
                         </button>
                         {(currentStep === 3)?
                         <button
@@ -29,7 +27,7 @@ export default class BottomNavigation extends React.Component{
                             className="btn"
                             onClick={nextStep}
                         >
-                            Следующий
+                            Следующий &rsaquo;
                         </button>
                         }
                     </div>
@@ -49,6 +47,5 @@ export default class BottomNavigation extends React.Component{
                 }
             </div>
         );
-    }
-};
+} 
 

@@ -62,7 +62,6 @@ button:focus, input:focus {
 	font-weight: bold;
 	margin-top: 50px;
   color: #bbbbbb;
-  align-self: flex-start;
 }
 
 .top_button {
@@ -85,8 +84,8 @@ button:focus, input:focus {
 .btn {
   margin-top: 150px;
 	color: #ff9800;
-	width: 142px;
-	padding: 6px;
+  padding: 6px;
+  font-weight: 500;
 }
 
 .btn_special{
@@ -102,9 +101,6 @@ button:focus, input:focus {
   align-self: flex-start;
 }
 
-.country_container{
-  align-self: flex-start;
-}
 
 td {
   padding-bottom: 10px;
@@ -129,8 +125,12 @@ td input[type=text]{
   height: 150px;
   display: inline-block;
   margin-right: 16px;
+  border-radius: 2px;
 }
 
+.imgActive{
+  border: 1px solid #ff9800;
+}
 
 .final_container {
   padding: 24px;
@@ -162,3 +162,158 @@ td input[type=text]{
   margin-top: 32px;
   padding: 10px;
 }
+
+
+
+@media (max-width: 768px){
+  body{
+    font-size: 14px;
+  }
+
+  .form_container {
+    width: 250px;
+  }
+
+  .buttons_container{
+    margin: 0; 
+  }
+
+  .top_button {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    font-weight: 500;
+  }
+
+
+  input[type=text], select {
+    font-size: 12px;
+    margin: 16px 1px 0 0;
+    padding: 10px;
+    width: 140px;
+  }
+
+  .error{
+    font-size: 12px;
+  }
+
+  .btn {
+    margin-top: 50px;
+    padding: 10px;
+    font-size: 10px;
+  }
+
+  td input[type=text]{
+    width: 150px;
+    padding: 6px 10px 6px 10px;
+  }
+
+  .img_container img {
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+  }
+
+
+  .final_container {
+    padding: 12px;
+    font-size: 12px;
+  } 
+  
+  .final_title{
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .final_data{
+    margin-right: 16px;
+  }
+
+  .final_image img{
+    width: 133.3px;
+    height: 130px;
+  }
+
+}
+
+
+@media (max-width: 480px){
+
+  body{
+    font-size: 12px;
+  }
+
+  .buttons_container{
+    margin: 0; 
+  }
+
+  .form_container {
+    width: 200px;
+  }
+
+  input[type=text], select {
+    font-size: 12px;
+    margin: 16px 1px 0 0;
+    padding: 8px;
+    width: 160px;
+  }
+
+  .top_button {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    font-weight: 500;
+  }
+
+  .btn {
+    margin-top: 50px;
+    padding: 6px;
+    font-size: 8px;
+  }
+
+  .img_container img {
+    width: 50px;
+    height: 50px;
+    margin-right: 6px;
+  }
+
+  td input[type=text]{
+    font-size: 8px;
+    width: 100px;
+    padding: 6px 8px 6px 8px;
+  }
+
+  .reset_btn{
+    margin-top: 32px;
+    padding: 6px;
+    font-size: 8px;
+  }
+
+  .final_container {
+    padding: 8px;
+    font-size: 8px;
+    flex-direction: column-reverse;
+    align-items: center;
+  } 
+
+  .final_title{
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .final_data{
+    min-width: 80px;
+    font-family: "Open Sans";
+  }
+
+
+  .final_image img{
+    width: 66.6px;
+    height: 65px;
+  }
+
+}
+
+

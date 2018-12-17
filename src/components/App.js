@@ -112,10 +112,10 @@ class App extends React.Component {
     const newStep = +event.target.name;
     const { steps } = this.state;
     
-    console.log(newStep);
-    console.log(this.state.currentStep);
-    console.log(steps[newStep].isCompleted);
-    if(steps[newStep].isCompleted){
+    //console.log(newStep);
+    //console.log(this.state.currentStep);
+    //console.log(steps[newStep].isCompleted);
+    if(steps[newStep].isCompleted || steps[newStep].isActive){
       this.setState({currentStep: newStep})
     }
   }
@@ -208,7 +208,7 @@ class App extends React.Component {
         {(currentStep === 0) && <FirstStep onChange={this.onChange} values={values} errors={errors}/>}
         {(currentStep === 1) && <SecondStep onChange={this.onChange} values={values} errors={errors} allCities={allCities}/>}
         {(currentStep === 2) && <ThirdStep onChangeSocial={this.onChangeSocial} onChange={this.onChange} values={values} errors={errors}/>}
-        {(currentStep === 3) && <FourthStep onChangeAvatar={this.onChangeAvatar} errors={errors}/>}
+        {(currentStep === 3) && <FourthStep onChangeAvatar={this.onChangeAvatar} errors={errors} values={values}/>}
         {(currentStep === 4) && <Final values={values} allCities={allCities}/>}
         <BottomNavigation nextStep={this.nextStep} prevStep={this.prevStep} currentStep={currentStep}/>
       </div>

@@ -31,19 +31,19 @@ export const validate = (values, step) => {
         }
         case 2: {
             if(values.fbIsChecked && !values.fbValue){
-                errors.fbValue = "- Required";
+                errors.fbValue = "Required";
             }
             
             if(values.vkIsChecked && !values.vkValue){
-                errors.vkValue = "- Required";
+                errors.vkValue = "Required";
             }
 
             if(values.okIsChecked && !values.okValue){
-                errors.okValue = "- Required";
+                errors.okValue = "Required";
             }
 
             if(values.twitIsChecked && !values.twitValue){
-                errors.twitValue = "- Required";
+                errors.twitValue = "Required";
             }
 
             break;
