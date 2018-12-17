@@ -58,11 +58,13 @@ button:focus, input:focus {
 }
 
 .buttons_container{
+  align-self: flex-start;
   margin-bottom: 16px;
 	font-weight: bold;
 	margin-top: 50px;
   color: #bbbbbb;
 }
+
 
 .top_button {
 	width: 40px;
@@ -83,6 +85,7 @@ button:focus, input:focus {
 
 .btn {
   margin-top: 150px;
+  width: 120px;
 	color: #ff9800;
   padding: 6px;
   font-weight: 500;
@@ -190,7 +193,7 @@ td input[type=text]{
     font-size: 12px;
     margin: 16px 1px 0 0;
     padding: 10px;
-    width: 140px;
+    width: 180px;
   }
 
   .error{
@@ -199,8 +202,9 @@ td input[type=text]{
 
   .btn {
     margin-top: 50px;
-    padding: 10px;
+    padding: 8px;
     font-size: 10px;
+    width: 90px;
   }
 
   td input[type=text]{
@@ -268,8 +272,9 @@ td input[type=text]{
 
   .btn {
     margin-top: 50px;
-    padding: 6px;
+    padding: 4px;
     font-size: 8px;
+    width: 65px;
   }
 
   .img_container img {

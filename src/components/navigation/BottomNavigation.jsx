@@ -12,7 +12,7 @@ export default function BottomNavigation(props){
                             onClick={prevStep}
                             disabled = {currentStep === 0}
                             >
-                            &lsaquo; Предыдущий 
+                            &lsaquo;  Предыдущий 
                         </button>
                         {(currentStep === 3)?
                         <button
@@ -27,7 +27,7 @@ export default function BottomNavigation(props){
                             className="btn"
                             onClick={nextStep}
                         >
-                            Следующий &rsaquo;
+                            Следующий  &rsaquo;
                         </button>
                         }
                     </div>
