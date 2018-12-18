@@ -1,11 +1,12 @@
 import React from "react";
 import countries from "../../data/countries.json";
-
+console.log(countries);
+const countryUrl = "../../data/countries.json";
 
 export default function SecondStep(props){
 
     const getOptionsCountry = items => {
-        //const countries = JSON.stringify(items);
+       // const countryList = JSON.parse(items);
         const countries = [];
         for (var key in items) {
             countries.push({
@@ -29,33 +30,36 @@ export default function SecondStep(props){
     const {values, onChange, errors, allCities} = props;
     return(
         <div className="country_container">
-            <p>2. Выберете страну и город</p>
-            <select
-                id="country"
-                name="country"
-                value={values.country}
-                onChange={onChange}
-                className={`${addErrorClass(errors.country)}`}
-                >
-                <option>
-                    Выберите страну
-                </option>
-                {getOptionsCountry(countries)}
-            </select>
-            {errors.country ? <div className="error">{errors.country}</div> : null}
-            <select
-                id="city"
-                name="city"
-                value={values.city}
-                onChange={onChange}
-                className={`${addErrorClass(errors.city)}`}
-                >
-                <option>
-                    Выберите город
-                </option>
-                {getOptionsItems(allCities)}
-            </select>
-            {errors.country ? <div className="error">{errors.country}</div> : null}
+            <div className="input-group">
+                <select
+                    id="country"
+                    name="country"
+                    value={values.country}
+                    onChange={onChange}
+                    className={`${addErrorClass(errors.country)}`}
+                    >
+                    <option>
+                        Страна
+                    </option>
+                    {getOptionsCountry(countries)}
+                </select>
+                {errors.country ? <div className="error">{errors.country}</div> : null}
+            </div>
+            <div className="input-group">
+                <select
+                        id="city"
+                        name="city"
+                        value={values.city}
+                        onChange={onChange}
+                        className={`${addErrorClass(errors.city)}`}
+                        >
+                        <option>
+                            Город
+                        </option>
+                        {getOptionsItems(allCities)}
+                    </select>
+                    {errors.country ? <div className="error">{errors.country}</div> : null}
+            </div>
         </div>
     );
 };

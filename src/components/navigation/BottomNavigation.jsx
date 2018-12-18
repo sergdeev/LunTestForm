@@ -3,7 +3,7 @@ import React from "react";
 export default function BottomNavigation(props){
     const { prevStep, nextStep, currentStep } = props;
         return(
-            <div className="bottomButtons_container">
+            <div className="bottomButtons_container" style={{"alignSelf": `${(currentStep !== 4)? '': "center"}`}}>
                 {(currentStep !== 4)? (
                     <div>
                         <button

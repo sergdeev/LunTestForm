@@ -1,6 +1,7 @@
 import React from "react";
 import BottomNavigation from "./navigation/BottomNavigation";
 import TopNavigation from "./navigation/TopNavigation";
+import StepTitle from "./StepTitle";
 import FirstStep from "./steps/FirstStep"
 import SecondStep from "./steps/SecondStep";
 import ThirdStep from "./steps/ThirdStep"
@@ -92,7 +93,7 @@ class App extends React.Component {
           ...prevState,
           errors: currentErrors
       }));
-  }
+    }
   };
 
   prevStep = () => {
@@ -146,7 +147,7 @@ class App extends React.Component {
   onChangeAvatar = event => {
     const newValues = {
       ...this.state.values,
-      avatar: event.target.name
+      avatar: event.target.title
     };
 
     const newErrors = {
@@ -205,6 +206,7 @@ class App extends React.Component {
     return (
       <div className="form_container">
         <TopNavigation currentStep={currentStep} steps={steps} changeStep={this.changeStep}/>
+        <p>{StepTitle[currentStep]}</p>
         {(currentStep === 0) && <FirstStep onChange={this.onChange} values={values} errors={errors}/>}
         {(currentStep === 1) && <SecondStep onChange={this.onChange} values={values} errors={errors} allCities={allCities}/>}
         {(currentStep === 2) && <ThirdStep onChangeSocial={this.onChangeSocial} onChange={this.onChange} values={values} errors={errors}/>}

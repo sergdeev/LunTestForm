@@ -1,4 +1,5 @@
 body {
+  overflow: hidden;
   margin: 0;
   padding: 0;
   background: #f5f5f5;
@@ -17,10 +18,10 @@ body {
 
 
 .form_container {
-  width: 350px;
+  width: 400px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column
 }
 
@@ -28,28 +29,15 @@ span {
   word-wrap: normal;
 }
 
-input[type=text], select {
-	color: #bbbbbb;
-	border-radius: 2px;
-	margin: 16px 1px 0 0;
-	padding: 12px;
-	width: 250px;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
 
-.valid {
-  border: 1px solid #ccc;
-  color: #bbbbbb;
-}
 
-.invalid {
-  border: 1px solid #ff0000;
-}
+/*Buttons*/
 
 button {
 	background-color: white;
 	border: none;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 button:focus, input:focus {
@@ -58,7 +46,6 @@ button:focus, input:focus {
 }
 
 .buttons_container{
-  align-self: flex-start;
   margin-bottom: 16px;
 	font-weight: bold;
 	margin-top: 50px;
@@ -72,6 +59,7 @@ button:focus, input:focus {
   margin-right: 8px;
   color: #C0C0C0;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .isActive{
@@ -91,50 +79,167 @@ button:focus, input:focus {
   font-weight: 500;
 }
 
+.btn:hover{
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
 .btn_special{
   background-color:  #ff9800;
   color: #fff;
 }
 
+
+
 .bottomButtons_container button:first-child {
 	margin-right: 12px;
 }
 
+
+
+
+
+/*Input name, email, country and city*/
+
+.input-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  width: 199%;
+}
+
+.error{
+  margin-left: 10px;
+  
+}
+
+input[type=text], select {
+  height: 15px;
+  display: block;
+	color: #bbbbbb;
+	border-radius: 2px;
+	margin-top: 16px;
+	padding: 12px;
+	width: 250px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.valid {
+  border: 1px solid #ccc;
+  color: #bbbbbb;
+}
+
+.invalid {
+  border: 1px solid #ff0000;
+}
+
+
+
+
+
+
+
+
+
+
+/*SOCIAL NETWORKS*/
+
 .social_container{
-  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 200%;
 }
 
 
-td {
-  padding-bottom: 10px;
+.left, .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 208px;
+  margin-top: 20px;
 }
 
-td input[type=checkbox]{
-  margin: 0;
+.right{
+  margin-left: 10px;
+  width: 100%;
 }
 
-td input[type=text]{
-  width: 200px;
-  padding: 6px 12px 6px 12px;
+.left{
+  padding-top: 1%;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 52px;
+  line-height: 52px;
+  width: 100%;
+}
+
+.checkbox-group .error{
+  margin-top: 2%;
+}
+
+input[type=checkbox]{
+  width: auto;
+  height: auto;
+  margin-right: 7px;
+}
+
+.socialInput{
+  max-width: 220px;
+}
+
+
+
+
+
+
+
+
+/*CHOOSE AVATAR*/
+
+.fourthStep_container{
+  align-self: center;
 }
 
 .img_container{
+
   display: flex;
   justify-content: space-between;
 }
 
-.img_container img {
+.img_container div {
   width: 150px;
   height: 150px;
   display: inline-block;
+  background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
   margin-right: 16px;
-  border-radius: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.img_container div:hover{
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 .imgActive{
   border: 1px solid #ff9800;
 }
 
+
+
+
+
+
+/*FINAL*/
 .final_container {
   padding: 24px;
   background-color: #fff;
@@ -142,6 +247,7 @@ td input[type=text]{
   justify-content: space-between;
   align-items: stretch;
   word-wrap: normal;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 } 
 
 .final_data{
@@ -155,10 +261,13 @@ td input[type=text]{
   font-weight: 600;
 }
 
-.final_image img{
+.final_image{
   width: 200px;
   height: 195px;
+  background-position: 50% 50%;
+	background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 2px;
 }
 
 .reset_btn{
@@ -212,7 +321,7 @@ td input[type=text]{
     padding: 6px 10px 6px 10px;
   }
 
-  .img_container img {
+  .img_container div {
     width: 90px;
     height: 90px;
     margin-right: 10px;
@@ -234,7 +343,7 @@ td input[type=text]{
     margin-right: 16px;
   }
 
-  .final_image img{
+  .final_image{
     width: 133.3px;
     height: 130px;
   }
@@ -314,7 +423,7 @@ td input[type=text]{
   }
 
 
-  .final_image img{
+  .final_image{
     width: 66.6px;
     height: 65px;
   }

@@ -15,13 +15,12 @@ export default function FourthStep(props){
 
     const { onChangeAvatar, errors, values } = props;
     return(
-        <div>
-            <p>4. Выберите любимого котика</p>
+        <div className="fourthStep_container">
             <div className="img_container">
-                <img className={getActiveClass(cat1)} src={cat1} name={cat1} onClick={onChangeAvatar}/>
-                <img className={getActiveClass(cat2)} src={cat2} name={cat2} onClick={onChangeAvatar}/>
-                <img className={getActiveClass(cat3)} src={cat3} name={cat3} onClick={onChangeAvatar}/>
-                <img className={getActiveClass(dog4)} src={dog4} name={dog4} onClick={onChangeAvatar}/>
+                <div className={getActiveClass(cat1)} style={{'backgroundImage':`url(${cat1})`}} title={cat1} onClick={onChangeAvatar}></div>
+                <div className={getActiveClass(cat2)} style={{'backgroundImage':`url(${cat2})`}} title={cat2} onClick={onChangeAvatar}></div>
+                <div className={getActiveClass(cat3)} style={{'backgroundImage':`url(${cat3})`}} title={cat3} onClick={onChangeAvatar}></div>
+                <div className={getActiveClass(dog4)} style={{'backgroundImage':`url(${dog4})`}} title={dog4} onClick={onChangeAvatar}></div>
             </div>
             {errors.avatar ? <div className="error">{errors.avatar}</div> : null}
         </div>  

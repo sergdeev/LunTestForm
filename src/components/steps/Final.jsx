@@ -1,5 +1,7 @@
 import React from "react";
 import countries from "../../data/countries.json";
+import cat2 from "../../images/cat2.jpg";
+
 
 export default function ThirdStep(props){
     const { values: {name, email, country, city, avatar, fbValue, vkValue, twitValue, okValue}, allCities } = props;
@@ -18,9 +20,7 @@ export default function ThirdStep(props){
                 <div>{twitValue? `Twitter: ${twitValue}`: ""}</div>
                 <div>{okValue? `Одноклассники: ${okValue}`: ""}</div> 
             </div>
-            <div className="final_image">
-                <img src={avatar}/>
-            </div>
+            <div style={{'backgroundImage':`url(${avatar})`}} className="final_image"></div>
         </div>
     );
 };

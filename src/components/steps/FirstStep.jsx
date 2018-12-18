@@ -6,25 +6,28 @@ export default function FirstStep(props){
     const {values, onChange, errors} = props;
     return(
         <div>
-            <p>1. Введите имя и e-mail</p>
-            <input
-                type="text"
-                placeholder="Имя"
-                name="name"
-                value={values.name}
-                onChange={onChange}
-                className={`${addErrorClass(errors.name)}`}
-            />
+            <div className="input-group">
+                <input
+                    type="text"
+                    placeholder="Имя"
+                    name="name"
+                    value={values.name}
+                    onChange={onChange}
+                    className={`${addErrorClass(errors.name)}`}
+                />
                 {errors.name ? <div className="error">{errors.name}</div> : null}
-            <input
-                type="text"
-                placeholder="Почта"
-                name="email"
-                value={values.email}
-                onChange={onChange}
-                className={`${addErrorClass(errors.email)}`}
-            />
+            </div>
+            <div className="input-group">
+                <input
+                    type="text"
+                    placeholder="Почта"
+                    name="email"
+                    value={values.email}
+                    onChange={onChange}
+                    className={`${addErrorClass(errors.email)}`}
+                />
                 {errors.email ? <div className="error">{errors.email}</div> : null}
+            </div>
         </div>
     );
 };
