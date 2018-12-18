@@ -5,26 +5,32 @@ export const validate = (values, step) => {
     switch (step) {
         case 0: {
             if(!values.name){
-                errors.name = "- Required";
+                errors.name = "Required";
             }
 
+            
             if(!values.email){
-                errors.email = "- Required";
-            }else if(!values.email.includes("@")) {
-                errors.email = "- В адресе должен быть символ @";
-            }else if(!values.email.includes(".")) {
-                errors.email = "- В адресе должен быть символ '.'";
-            }
+                errors.email = "Required";
+            }else if(values.email.match(/^.*@.{1,}\..{2,}$/) == null) {
+                if(!values.email.includes("@")){
+                    errors.email = 'В адресе должен быть символ «@»';
+                }else if(values.email.match(/^.*@.{1,}\.?.{0,1}$/) != null){
+                    errors.email = 'Проверьте почтовый домен';
+                }
+                else{
+                    errors.email = 'Введите корректный email';
+                }
+              }
 
             break;
         }
         case 1: {
             if(!values.country){
-                errors.country = "- Required";
+                errors.country = "Required";
             }
             
             if(!values.city){
-                errors.city = "- Required";
+                errors.city = "Required";
             }
 
             break;
@@ -50,7 +56,7 @@ export const validate = (values, step) => {
         }
         case 3: {
             if(!values.avatar){
-                errors.avatar = "- Required";
+                errors.avatar = "Required";
             }else if(values.avatar === dog4){
                 errors.avatar = "Вы выбрали собачку. А надо котика.";
             }
