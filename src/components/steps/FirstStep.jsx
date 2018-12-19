@@ -5,7 +5,7 @@ export default function FirstStep(props){
     const addErrorClass = (error) => (error? 'invalid' : 'valid');
     const {values, onChange, errors} = props;
     return(
-        <div>
+        <div className="name_container">
             <div className="input-group">
                 <input
                     type="text"
