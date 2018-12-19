@@ -206,7 +206,7 @@ class App extends React.Component {
     return (
       <div className="form_container">
         <TopNavigation currentStep={currentStep} steps={steps} changeStep={this.changeStep}/>
-        <p>{StepTitle[currentStep]}</p>
+        <p className="title">{StepTitle[currentStep]}</p>
         {(currentStep === 0) && <FirstStep onChange={this.onChange} values={values} errors={errors}/>}
         {(currentStep === 1) && <SecondStep onChange={this.onChange} values={values} errors={errors} allCities={allCities}/>}
         {(currentStep === 2) && <ThirdStep onChangeSocial={this.onChangeSocial} onChange={this.onChange} values={values} errors={errors}/>}

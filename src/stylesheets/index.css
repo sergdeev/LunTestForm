@@ -308,6 +308,10 @@ input[type=checkbox]{
     height: 300px;
   }
 
+  .title{
+    font-size: 12px;
+  }
+
   .country_container, .name_container{
     height: 150px;
   }
@@ -424,6 +428,11 @@ input[type=checkbox]{
     width: 160px;
   }
 
+  .title{
+    font-size: 10px;
+  }
+
+
   select{
     width: 178px;
     padding: 7px;
@@ -459,6 +468,10 @@ input[type=checkbox]{
     overflow-x: hidden;
   }
 
+  .title{
+    font-size: 8px;
+  }
+
   .buttons_container{
     margin: 0; 
   }
@@ -468,22 +481,36 @@ input[type=checkbox]{
   }
 
   input[type=text], select {
-    font-size: 12px;
+    font-size: 9px;
+    max-width: 70px;
     margin: 16px 1px 0 0;
-    padding: 8px;
+    padding: 4px;
     width: 160px;
   }
 
+  select{
+    max-width: 80px;
+    padding: 3px;
+  }
+
+  .error{
+    font-size: 9px;
+    width: 100px;
+    word-wrap: normal
+  }
+
   .top_button {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
+    font-size: 9px;
+    width: 15px;
+    height: 15px;
+    margin-right: 6px;
     font-weight: 500;
   }
 
   .btn {
+    margin-top: 20px;
     padding: 4px;
-    font-size: 8px;
+    font-size: 6px;
     width: 65px;
   }
 
