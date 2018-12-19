@@ -515,9 +515,25 @@ input[type=checkbox]{
   }
 
 
+  .social_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+  }
+
   .left, .right {
     height: 140px;
     margin-top: 1px;
+  }
+
+  .right{
+    margin-left: 0;
+  }
+
+  .right .checkbox-group {
+    align-items: baseline;
   }
 
   .checkbox-group {
@@ -540,7 +556,7 @@ input[type=checkbox]{
     font-size: 9px;
     height: 10px;
     padding: 0px;
-    max-width: 140px;
+    width: 140px;
   }
 
   .img_container{
