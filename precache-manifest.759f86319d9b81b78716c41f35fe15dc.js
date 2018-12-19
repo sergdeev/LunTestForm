@@ -20,19 +20,19 @@ self.__precacheManifest = [
     "url": "/LunTestForm/static/js/runtime~main.24bf3922.js"
   },
   {
-    "revision": "0f5d66ef281c98f3f8a2",
-    "url": "/LunTestForm/static/js/main.0f5d66ef.chunk.js"
+    "revision": "c072ffe7460fcc143f76",
+    "url": "/LunTestForm/static/js/main.c072ffe7.chunk.js"
   },
   {
     "revision": "67c713e83335f7471df6",
     "url": "/LunTestForm/static/js/1.67c713e8.chunk.js"
   },
   {
-    "revision": "0f5d66ef281c98f3f8a2",
-    "url": "/LunTestForm/static/css/main.2ed607aa.chunk.css"
+    "revision": "c072ffe7460fcc143f76",
+    "url": "/LunTestForm/static/css/main.03de3262.chunk.css"
   },
   {
-    "revision": "cd96d84c9cfc0ead5bc3a4ff38a837af",
+    "revision": "63352435f4799f1bb0bc7cea0f792020",
     "url": "/LunTestForm/index.html"
   }
 ];
